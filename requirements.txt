@@ -1,0 +1,7 @@
+pillow
+
+django
+django-environ
+django-resized
+python-decouple
+django-browser-reload
