@@ -1,0 +1,24 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="11">
+            <item index="0" class="java.lang.String" itemvalue="django-allauth" />
+            <item index="1" class="java.lang.String" itemvalue="jango-notifications-hq" />
+            <item index="2" class="java.lang.String" itemvalue="django_notifications_hq" />
+            <item index="3" class="java.lang.String" itemvalue="xhtml2pdf" />
+            <item index="4" class="java.lang.String" itemvalue="psycopg2-binary" />
+            <item index="5" class="java.lang.String" itemvalue="stripe" />
+            <item index="6" class="java.lang.String" itemvalue="django-phonenumbers" />
+            <item index="7" class="java.lang.String" itemvalue="django-phonenumber-field" />
+            <item index="8" class="java.lang.String" itemvalue="requests" />
+            <item index="9" class="java.lang.String" itemvalue="dj-rest-auth" />
+            <item index="10" class="java.lang.String" itemvalue="gunicorn" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>
