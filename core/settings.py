@@ -22,7 +22,7 @@ env = environ.Env(
 environ.Env.read_env(BASE_DIR / '.env')
 
 DEBUG = True
-SERVER = False
+SERVER = True
 ROOT_URLCONF = 'core.urls'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
