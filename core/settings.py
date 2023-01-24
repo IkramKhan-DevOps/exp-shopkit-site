@@ -18,6 +18,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 SECRET_KEY = env('SECRET_KEY')
 ENVIRONMENT = env('ENVIRONMENT')
 ALLOWED_HOSTS = ["127.0.0.1", "shopkit.exarth.com"]
+SITE_ID = 1
 
 INSTALLED_APPS = [
     # DJANGO APPS
