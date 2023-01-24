@@ -1,17 +1,26 @@
-
 from django.contrib import admin
+from django.shortcuts import render
 from django.urls import path, include
-from django.views.generic import TemplateView
 from core.settings import ENVIRONMENT
+
+
+def handler404(request, *args, **kwargs):
+    return render(request, "404.html")
+
+
+def handler500(request, *args, **kwargs):
+    return render(request, "500.html")
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-# your apps urls
+
 urlpatterns += [
     path('', include('src.website.urls', namespace='website')),
 ]
+
 
 if ENVIRONMENT != 'server':
     urlpatterns += [
