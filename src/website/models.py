@@ -6,6 +6,7 @@ class Application(models.Model):
         ('w', 'Windows'),
         ('l', 'Linux'),
         ('m', 'Mac'),
+        ('g', 'Global'),
     )
     CATEGORY_CHOICE = (
         ('f', 'Free'),

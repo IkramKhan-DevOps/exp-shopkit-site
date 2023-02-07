@@ -19,11 +19,13 @@ class DownloadView(TemplateView):
         context = super(DownloadView, self).get_context_data(**kwargs)
 
         windows_app_free = Application.objects.filter(operating_system='w').order_by('-version')
+        global_app_free = Application.objects.filter(operating_system='g').order_by('-version')
         linux_app_free = Application.objects.filter(operating_system='l').order_by('-version')
         mac_app_free = Application.objects.filter(operating_system='m').order_by('-version')
 
         context['windows_app_free'] = windows_app_free.first() if windows_app_free else None
         context['linux_app_free'] = windows_app_free.first() if windows_app_free else None
+        context['global_app_free'] = global_app_free.first() if global_app_free else None
         context['mac_app_free'] = windows_app_free.first() if windows_app_free else None
         return context
 
