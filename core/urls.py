@@ -30,7 +30,7 @@ urlpatterns += [
 ]
 
 
-if ENVIRONMENT != 'server':
-    urlpatterns += [
-        path("__reload__/", include("django_browser_reload.urls"))
-    ]
+# if ENVIRONMENT != 'server':
+#     urlpatterns += [
+#         path("__reload__/", include("django_browser_reload.urls"))
+#     ]

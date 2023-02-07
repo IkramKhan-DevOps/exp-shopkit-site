@@ -4,354 +4,29 @@
 
 {% block context %}
 
-{# HERO SECTION #}
-<div class="home">
-    <div class="container">
-        <div class="hero-content wow fadeIn">
-            <div class="flex-split">
-                <div class="container">
-                    <div class="flex-inner flex-inverted align-center">
-                        <div class="f-image f-image-inverted">
-                            <img class="img-fluid" src="{% static 'website/images/head.png' %}" alt="Feature">
-                        </div>
-                        <div class="f-text">
-                            <div class="left-content">
-                                <h4>Your business, streamlined</h4>
-                                <h2>The ultimate point of sale solution</h2>
-                                <a class="btn-action btn-outline nav-link js-scroll-trigger"
-                                   href="{% url 'website:download' %}">
-                                    Download Now
-                                </a>
-                                <a class="btn-action" href="#">Contact Us</a>
+    {# HERO SECTION #}
+    <div class="home">
+        <div class="container">
+            <div class="hero-content wow fadeIn">
+                <div class="flex-split">
+                    <div class="container">
+                        <div class="flex-inner flex-inverted align-center">
+                            <div class="f-image f-image-inverted">
+                                <img class="img-fluid" src="{% static 'website/images/head.png' %}" alt="Feature">
                             </div>
-                            <p class="condition_txt">Free unrestricted usage for next 3 months<br> No credit
-                                card
-                                required*</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-
-{# FEATURES #}
-<div class="yd-cat">
-    <div class="container">
-        <div class="cat-inner">
-            <div class="cat-flex">
-                <div class="cat2">
-                    <h4>What's inside</h4>
-                    <h2>Ultimate solution for managing your business</h2>
-                    <p> Our innovative point of sale system streamlines your sales process, simplifies your
-                        operations, and elevates the customer experience</p>
-                </div>
-            </div>
-            <div class="cat-flex mt-4">
-                <div class="cat1">
-                    <div class="cat-item clr1">
-                        <div class="cat-icon">
-                            <div class="cat-img">
-                                <img src="{% static 'website/icons/inve.png' %}" width="80" alt="Feature">
-                            </div>
-                        </div>
-                        <div class="cat-text">
-                            <h3>Inventory Management</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cat1">
-                    <div class="cat-item clr2">
-                        <div class="cat-icon">
-                            <div class="cat-img">
-                                <img src="{% static 'website/icons/cust.png' %}" width="80" alt="Feature">
-                            </div>
-                        </div>
-                        <div class="cat-text">
-                            <h3>Customers Management</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cat1">
-                    <div class="cat-item clr3">
-                        <div class="cat-icon">
-                            <div class="cat-img">
-                                <img src="{% static 'website/icons/dash.png' %}" width="80" alt="Feature">
-                            </div>
-                        </div>
-                        <div class="cat-text">
-                            <h3>Dashboard</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="cat-flex mt-4">
-                <div class="cat1">
-                    <div class="cat-item clr1">
-                        <div class="cat-icon">
-                            <div class="cat-img">
-                                <img src="{% static 'website/icons/ordr.png' %}" width="80" alt="Feature">
-                            </div>
-                        </div>
-                        <div class="cat-text">
-                            <h3>Orders</h3>
-                            <p>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cat1">
-                    <div class="cat-item clr2">
-                        <div class="cat-icon">
-                            <div class="cat-img">
-                                <img src="{% static 'website/icons/returns.png' %}" width="80" alt="Feature">
-                            </div>
-                        </div>
-                        <div class="cat-text">
-                            <h3>Returns</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cat1">
-                    <div class="cat-item clr3">
-                        <div class="cat-icon">
-                            <div class="cat-img">
-                                <img src="{% static 'website/icons/sales.png' %}" width="80" alt="Feature">
-                            </div>
-                        </div>
-                        <div class="cat-text">
-                            <h3>Sales</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="cat-flex mt-4">
-                <div class="cat1">
-                    <div class="cat-item clr1">
-                        <div class="cat-icon">
-                            <div class="cat-img">
-                                <img src="{% static 'website/icons/security.png' %}" width="80" alt="Feature">
-                            </div>
-                        </div>
-                        <div class="cat-text">
-                            <h3>Security</h3>
-                            <p>
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cat1">
-                    <div class="cat-item clr2">
-                        <div class="cat-icon">
-                            <div class="cat-img">
-                                <img src="{% static 'website/icons/back.png' %}" width="80" alt="Feature">
-                            </div>
-                        </div>
-                        <div class="cat-text">
-                            <h3>Backups</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cat1">
-                    <div class="cat-item clr3">
-                        <div class="cat-icon">
-                            <div class="cat-img">
-                                <img src="{% static 'website/icons/secu.png' %}" width="80" alt="Feature">
-                            </div>
-                        </div>
-                        <div class="cat-text">
-                            <h3>Permissions</h3>
-                            <p></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-{# MORE FEATURES #}
-<div id="features" class="ft-flex">
-    <div class="container">
-        <div class="ft-inner align-center">
-            <div class="ft-image wow">
-                <img class="img-fluid" src="{% static 'website/images/support.png' %}" alt="Feature">
-            </div>
-            <div class="ft-text">
-                <div class="ft-content">
-                    <h2>Machine Support</h2>
-                    <p>Almost all required printers are supported, here is the list below</p>
-                    <ul>
-                        <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick"> A4 Printers
-                        </li>
-                        <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick"> Receipt Printers
-                        </li>
-                        <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick"> Barcode Printers
-                        </li>
-                        <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick"> Barcode Scanner
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="ft-inner ft-inverted align-center">
-            <div class="ft-image f-image-inverted">
-                <img class="img-fluid" src="{% static 'website/images/write.png' %}" alt="Feature">
-            </div>
-            <div class="ft-text">
-                <div class="ft-content">
-                    <h2>Advance Features</h2>
-                    <p>Here are some the advanced features and secure measures</p>
-                    <ul>
-                        <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick">Multi User Login</li>
-                        <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick">Multi counters</li>
-                        <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick">Local Backups</li>
-                        <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick">Email Alerts</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-{# STATISTICS #}
-<div class="yd-stats">
-    <div class="container-s">
-        <div class="row text-center">
-            <div class="col-sm-12">
-                <div class="intro">
-                    <h4>OUR RESULTS</h4>
-                    <h2>Our awesome results worth displaying</h2>
-                </div>
-            </div>
-            <div class="col-6 col-sm-3">
-                <div class="counter-up">
-                    <div class="counter-icon">
-                        <img src="{% static 'website/icons/f1.png' %}" alt="Icon">
-                    </div>
-                    <h3><span class="counter">47</span>%</h3>
-                    <div class="counter-text">
-                        <h2>Monthly Users</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-sm-3">
-                <div class="counter-up">
-                    <div class="counter-icon">
-                        <img src="{% static 'website/icons/f2.png' %}" alt="Icon">
-                    </div>
-                    <h3><span class="counter">33</span>%</h3>
-                    <div class="counter-text">
-                        <h2>Daily Views</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-sm-3">
-                <div class="counter-up">
-                    <div class="counter-icon">
-                        <img src="{% static 'website/icons/f3.png' %}" alt="Icon">
-                    </div>
-                    <h3><span class="counter">28</span>%</h3>
-                    <div class="counter-text">
-                        <h2>Monthly Returns</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6 col-sm-3">
-                <div class="counter-up">
-                    <div class="counter-icon">
-                        <img src="{% static 'website/icons/f4.png' %}" alt="Icon">
-                    </div>
-                    <h3><span class="counter">349</span>%</h3>
-                    <div class="counter-text">
-                        <h2>Annual Growth</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-{# REVIEWS #}
-<div id="reviews" class="yd_reviews">
-    <div class="container">
-        <div class="yd_rev_inner">
-            <div class="row">
-                <div class="col-md-5">
-                    <div class="rev-intro">
-                        <h2>Stories from our customers</h2>
-                        <p> When you get staright to the point the presentation looks attractive.</p>
-                    </div>
-                </div>
-                <div class="col-md-7">
-                    <div class="rev-list owl-carousel owl-theme">
-                        <div class="rev-block">
-                            <img src="{% static 'website/icons/quote.svg' %}" width="60" alt="Quote">
-                            <h2>I highly recommend Shopkit POS to any business looking for a reliable and
-                                efficient point of sale system. The inventory management feature alone has saved
-                                me so much time and made it easy for me to keep track of my stock levels.</h2>
-                            <div class="rev-client">
-                                <div class="rev-icon">
-                                    <div class="rev-img">
-                                        <img class="rounded-circle" src="{% static 'website/icons/rev.png' %}"
-                                             width="60" alt="Feature">
-                                    </div>
+                            <div class="f-text">
+                                <div class="left-content">
+                                    <h4>Your business, streamlined</h4>
+                                    <h2>The ultimate point of sale solution</h2>
+                                    <a class="btn-action btn-outline nav-link js-scroll-trigger"
+                                       href="{% url 'website:download' %}">
+                                        Download Now
+                                    </a>
+                                    <a class="btn-action" href="mailto:ikram.khan0762@gmail.com">Contact Us</a>
                                 </div>
-                                <div class="rev-text">
-                                    <h3>Akbar Khan Swati</h3>
-                                    <p>Head of OP, <a href="#">StallionGrace Atd</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="rev-block">
-                            <img src="{% static 'website/icons/quote.svg' %}" width="60" alt="Quote">
-                            <h2>I've been using Shopkit POS for my retail business for the past 6 months, and it
-                                has made a huge difference in how I manage my inventory and track my sales. The
-                                user interface is intuitive and easy to use, and the detailed reporting feature
-                                helps me make informed business decisions.</h2>
-                            <div class="rev-client">
-                                <div class="rev-icon">
-                                    <div class="rev-img">
-                                        <img class="rounded-circle" src="{% static 'website/icons/rev2.png' %}"
-                                             width="60" alt="Feature">
-                                    </div>
-                                </div>
-                                <div class="rev-text">
-                                    <h3>Muhammad Saad</h3>
-                                    <p><a href="#">Hakeem Shops, Havelian</a></p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="rev-block">
-                            <img src="{% static 'website/icons/quote.svg' %}" width="60" alt="Quote">
-                            <h2>
-                                As a small business owner, I appreciate the flexibility and scalability of
-                                Shopkit POS. It has allowed me to grow my business and improve the customer
-                                experience by providing me with a comprehensive and easy-to-use system for
-                                managing my operations.
-                            </h2>
-                            <div class="rev-client">
-                                <div class="rev-icon">
-                                    <div class="rev-img">
-                                        <img class="rounded-circle" src="{% static 'website/icons/rev3.png' %}"
-                                             width="60" alt="Feature">
-                                    </div>
-                                </div>
-                                <div class="rev-text">
-                                    <h3>Ayub Kuloch</h3>
-                                    <p>Manager Sales, <a href="#">Medi Pharma</a></p>
-                                </div>
+                                <p class="condition_txt">Free unrestricted usage for next 3 months<br> No credit
+                                    card
+                                    required*</p>
                             </div>
                         </div>
                     </div>
@@ -359,140 +34,466 @@
             </div>
         </div>
     </div>
-</div>
 
-{# PRICING #}
-<div id="pricing" class="pricing-section text-center">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 offset-lg-2 col-sm-10 offset-sm-1">
-                <div class="pricing-intro">
-                    <h1>Simple & Affordable Pricing.</h1>
-                    <p>
-                        Our plans are designed to meet the requirements of both beginners <br class="hidden-xs">
-                        and players.
-                        Get the right plan that suits you.
-                    </p>
+
+    {# FEATURES #}
+    <div class="yd-cat">
+        <div class="container">
+            <div class="cat-inner">
+                <div class="cat-flex">
+                    <div class="cat2">
+                        <h4>What's inside</h4>
+                        <h2>Ultimate solution for managing your business</h2>
+                        <p> Our innovative point of sale system streamlines your sales process, simplifies your
+                            operations, and elevates the customer experience</p>
+                    </div>
                 </div>
+                <div class="cat-flex mt-4">
+                    <div class="cat1">
+                        <div class="cat-item clr1">
+                            <div class="cat-icon">
+                                <div class="cat-img">
+                                    <img src="{% static 'website/icons/inve.png' %}" width="80" alt="Feature">
+                                </div>
+                            </div>
+                            <div class="cat-text">
+                                <h3>Inventory Management</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cat1">
+                        <div class="cat-item clr2">
+                            <div class="cat-icon">
+                                <div class="cat-img">
+                                    <img src="{% static 'website/icons/cust.png' %}" width="80" alt="Feature">
+                                </div>
+                            </div>
+                            <div class="cat-text">
+                                <h3>Customers Management</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cat1">
+                        <div class="cat-item clr3">
+                            <div class="cat-icon">
+                                <div class="cat-img">
+                                    <img src="{% static 'website/icons/dash.png' %}" width="80" alt="Feature">
+                                </div>
+                            </div>
+                            <div class="cat-text">
+                                <h3>Dashboard</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cat-flex mt-4">
+                    <div class="cat1">
+                        <div class="cat-item clr1">
+                            <div class="cat-icon">
+                                <div class="cat-img">
+                                    <img src="{% static 'website/icons/ordr.png' %}" width="80" alt="Feature">
+                                </div>
+                            </div>
+                            <div class="cat-text">
+                                <h3>Orders</h3>
+                                <p>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cat1">
+                        <div class="cat-item clr2">
+                            <div class="cat-icon">
+                                <div class="cat-img">
+                                    <img src="{% static 'website/icons/returns.png' %}" width="80" alt="Feature">
+                                </div>
+                            </div>
+                            <div class="cat-text">
+                                <h3>Returns</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cat1">
+                        <div class="cat-item clr3">
+                            <div class="cat-icon">
+                                <div class="cat-img">
+                                    <img src="{% static 'website/icons/sales.png' %}" width="80" alt="Feature">
+                                </div>
+                            </div>
+                            <div class="cat-text">
+                                <h3>Sales</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cat-flex mt-4">
+                    <div class="cat1">
+                        <div class="cat-item clr1">
+                            <div class="cat-icon">
+                                <div class="cat-img">
+                                    <img src="{% static 'website/icons/security.png' %}" width="80" alt="Feature">
+                                </div>
+                            </div>
+                            <div class="cat-text">
+                                <h3>Security</h3>
+                                <p>
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cat1">
+                        <div class="cat-item clr2">
+                            <div class="cat-icon">
+                                <div class="cat-img">
+                                    <img src="{% static 'website/icons/back.png' %}" width="80" alt="Feature">
+                                </div>
+                            </div>
+                            <div class="cat-text">
+                                <h3>Backups</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cat1">
+                        <div class="cat-item clr3">
+                            <div class="cat-icon">
+                                <div class="cat-img">
+                                    <img src="{% static 'website/icons/secu.png' %}" width="80" alt="Feature">
+                                </div>
+                            </div>
+                            <div class="cat-text">
+                                <h3>Permissions</h3>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# MORE FEATURES #}
+    <div id="features" class="ft-flex">
+        <div class="container">
+            <div class="ft-inner align-center">
+                <div class="ft-image wow">
+                    <img class="img-fluid" src="{% static 'website/images/support.png' %}" alt="Feature">
+                </div>
+                <div class="ft-text">
+                    <div class="ft-content">
+                        <h2>Machine Support</h2>
+                        <p>Almost all required printers are supported, here is the list below</p>
+                        <ul>
+                            <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick"> A4 Printers
+                            </li>
+                            <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick"> Receipt Printers
+                            </li>
+                            <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick"> Barcode Printers
+                            </li>
+                            <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick"> Barcode Scanner
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ft-inner ft-inverted align-center">
+                <div class="ft-image f-image-inverted">
+                    <img class="img-fluid" src="{% static 'website/images/write.png' %}" alt="Feature">
+                </div>
+                <div class="ft-text">
+                    <div class="ft-content">
+                        <h2>Advance Features</h2>
+                        <p>Here are some the advanced features and secure measures</p>
+                        <ul>
+                            <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick">Multi User Login</li>
+                            <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick">Multi counters</li>
+                            <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick">Local Backups</li>
+                            <li><img src="{% static 'website/icons/tick.svg' %}" alt="Tick">Email Alerts</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# STATISTICS #}
+    <div class="yd-stats">
+        <div class="container-s">
+            <div class="row text-center">
+                <div class="col-sm-12">
+                    <div class="intro">
+                        <h4>OUR RESULTS</h4>
+                        <h2>Our awesome results worth displaying</h2>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="counter-up">
+                        <div class="counter-icon">
+                            <img src="{% static 'website/icons/f1.png' %}" alt="Icon">
+                        </div>
+                        <h3><span class="counter">47</span>%</h3>
+                        <div class="counter-text">
+                            <h2>Monthly Users</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="counter-up">
+                        <div class="counter-icon">
+                            <img src="{% static 'website/icons/f2.png' %}" alt="Icon">
+                        </div>
+                        <h3><span class="counter">33</span>%</h3>
+                        <div class="counter-text">
+                            <h2>Daily Views</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="counter-up">
+                        <div class="counter-icon">
+                            <img src="{% static 'website/icons/f3.png' %}" alt="Icon">
+                        </div>
+                        <h3><span class="counter">28</span>%</h3>
+                        <div class="counter-text">
+                            <h2>Monthly Returns</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6 col-sm-3">
+                    <div class="counter-up">
+                        <div class="counter-icon">
+                            <img src="{% static 'website/icons/f4.png' %}" alt="Icon">
+                        </div>
+                        <h3><span class="counter">349</span>%</h3>
+                        <div class="counter-text">
+                            <h2>Annual Growth</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# REVIEWS #}
+    <div id="reviews" class="yd_reviews">
+        <div class="container">
+            <div class="yd_rev_inner">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="table-left">
-                            <h2>Basic Free</h2>
-                            <p>Limited features</p>
-                            <img class="img-fluid" src="{% static 'website/icons/f1.png' %}" width="120"
-                                 alt="Icon">
-                            <div class="pricing-details">
-                                <span>Free</span>
-                                <div class="sub_span">Lifetime</div>
-                            </div>
-                            <a class="btn-action">Download</a>
+                    <div class="col-md-5">
+                        <div class="rev-intro">
+                            <h2>Stories from our customers</h2>
+                            <p> When you get staright to the point the presentation looks attractive.</p>
                         </div>
                     </div>
-
-                    <div class="col-md-6">
-                        <div class="table-right">
-                            <h2>Premium</h2>
-                            <p>Unlimited Lifetime</p>
-                            <img class="img-fluid" src="{% static 'website/icons/f3.png' %}" width="120"
-                                 alt="Icon">
-                            <div class="pricing-details">
-                                <span>$200</span>
-                                <div class="sub_span sub_span_alt">Lifetime</div>
+                    <div class="col-md-7">
+                        <div class="rev-list owl-carousel owl-theme">
+                            <div class="rev-block">
+                                <img src="{% static 'website/icons/quote.svg' %}" width="60" alt="Quote">
+                                <h2>I highly recommend Shopkit POS to any business looking for a reliable and
+                                    efficient point of sale system. The inventory management feature alone has saved
+                                    me so much time and made it easy for me to keep track of my stock levels.</h2>
+                                <div class="rev-client">
+                                    <div class="rev-icon">
+                                        <div class="rev-img">
+                                            <img class="rounded-circle" src="{% static 'website/icons/rev.png' %}"
+                                                 width="60" alt="Feature">
+                                        </div>
+                                    </div>
+                                    <div class="rev-text">
+                                        <h3>Akbar Khan Swati</h3>
+                                        <p>Head of OP, <a href="#">StallionGrace Atd</a></p>
+                                    </div>
+                                </div>
                             </div>
-                            <a class="btn-action btn-outline">Upcoming</a>
+
+                            <div class="rev-block">
+                                <img src="{% static 'website/icons/quote.svg' %}" width="60" alt="Quote">
+                                <h2>I've been using Shopkit POS for my retail business for the past 6 months, and it
+                                    has made a huge difference in how I manage my inventory and track my sales. The
+                                    user interface is intuitive and easy to use, and the detailed reporting feature
+                                    helps me make informed business decisions.</h2>
+                                <div class="rev-client">
+                                    <div class="rev-icon">
+                                        <div class="rev-img">
+                                            <img class="rounded-circle" src="{% static 'website/icons/rev2.png' %}"
+                                                 width="60" alt="Feature">
+                                        </div>
+                                    </div>
+                                    <div class="rev-text">
+                                        <h3>Muhammad Saad</h3>
+                                        <p><a href="#">Hakeem Shops, Havelian</a></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="rev-block">
+                                <img src="{% static 'website/icons/quote.svg' %}" width="60" alt="Quote">
+                                <h2>
+                                    As a small business owner, I appreciate the flexibility and scalability of
+                                    Shopkit POS. It has allowed me to grow my business and improve the customer
+                                    experience by providing me with a comprehensive and easy-to-use system for
+                                    managing my operations.
+                                </h2>
+                                <div class="rev-client">
+                                    <div class="rev-icon">
+                                        <div class="rev-img">
+                                            <img class="rounded-circle" src="{% static 'website/icons/rev3.png' %}"
+                                                 width="60" alt="Feature">
+                                        </div>
+                                    </div>
+                                    <div class="rev-text">
+                                        <h3>Ayub Kuloch</h3>
+                                        <p>Manager Sales, <a href="#">Medi Pharma</a></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <p class="refund-txt">* Refund requests can be accepted with in 10 days of the purchase.</p>
             </div>
         </div>
     </div>
-</div>
 
-{# FAQ's #}
-<div id="faqs" class="yd_faqs">
-    <div class="container">
-        <div class="faq_inner">
-            <div class="col-md-10 offset-md-1">
-                <div class="faq_intro">
-                    <h2>Frequently Asked Queries</h2>
-                    <p>Your Guide to Shopkit POS</p>
-                    <h5>Still have questions?</h5> <a class="link-btm" href="mailto:ikram.khan0762@gmail.com">Contact
-                    us</a>
-                </div>
-                <div id="accordion">
+    {# PRICING #}
+    <div id="pricing" class="pricing-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2 col-sm-10 offset-sm-1">
+                    <div class="pricing-intro">
+                        <h1>Simple & Affordable Pricing.</h1>
+                        <p>
+                            Our plans are designed to meet the requirements of both beginners <br class="hidden-xs">
+                            and players.
+                            Get the right plan that suits you.
+                        </p>
+                    </div>
                     <div class="row">
-                        <div class="col-md-6 custompadding">
-                            <div class="card mb-0">
-                                <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
-                                    <a class="card-title">
-                                        How does Shopkit POS help me manage my inventory?
-                                    </a>
+                        <div class="col-md-6">
+                            <div class="table-left">
+                                <h2>Basic Free</h2>
+                                <p>Limited features</p>
+                                <img class="img-fluid" src="{% static 'website/icons/f1.png' %}" width="120"
+                                     alt="Icon">
+                                <div class="pricing-details">
+                                    <span>Free</span>
+                                    <div class="sub_span">Lifetime</div>
                                 </div>
-                                <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
-                                     data-parent="#accordion">
-                                    <div class="card-body">
-                                        <p>
-                                            Shopkit POS allows you to track your inventory in real-time, set
-                                            reorder points, and generate reports on which products are selling
-                                            the most. This helps you optimize your inventory and ensure that you
-                                            always have the products your customers want in stock.
-                                        </p>
+                                <a class="btn-action">Download</a>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="table-right">
+                                <h2>Premium</h2>
+                                <p>Unlimited Lifetime</p>
+                                <img class="img-fluid" src="{% static 'website/icons/f3.png' %}" width="120"
+                                     alt="Icon">
+                                <div class="pricing-details">
+                                    <span>$200</span>
+                                    <div class="sub_span sub_span_alt">Lifetime</div>
+                                </div>
+                                <a class="btn-action btn-outline">Upcoming</a>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="refund-txt">* Refund requests can be accepted with in 10 days of the purchase.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# FAQ's #}
+    <div id="faqs" class="yd_faqs">
+        <div class="container">
+            <div class="faq_inner">
+                <div class="col-md-10 offset-md-1">
+                    <div class="faq_intro">
+                        <h2>Frequently Asked Queries</h2>
+                        <p>Your Guide to Shopkit POS</p>
+                        <h5>Still have questions?</h5> <a class="link-btm" href="mailto:ikram.khan0762@gmail.com">Contact
+                        us</a>
+                    </div>
+                    <div id="accordion">
+                        <div class="row">
+                            <div class="col-md-6 custompadding">
+                                <div class="card mb-0">
+                                    <div class="card-header collapsed" data-toggle="collapse" href="#collapseOne">
+                                        <a class="card-title">
+                                            How does Shopkit POS help me manage my inventory?
+                                        </a>
+                                    </div>
+                                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne"
+                                         data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>
+                                                Shopkit POS allows you to track your inventory in real-time, set
+                                                reorder points, and generate reports on which products are selling
+                                                the most. This helps you optimize your inventory and ensure that you
+                                                always have the products your customers want in stock.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 custompadding">
-                            <div class="card mb-0">
-                                <div class="card-header collapsed" data-toggle="collapse" href="#collapseTwo">
-                                    <a class="card-title">
-                                        Can I track customer information and purchases with Shopkit POS?
-                                    </a>
-                                </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                     data-parent="#accordion">
-                                    <div class="card-body">
-                                        <p>Yes, Shopkit POS includes a customer management system that allows
-                                            you to store customer information, track customer purchases, and
-                                            create marketing campaigns based on customer data.
-                                        </p>
+                            <div class="col-md-6 custompadding">
+                                <div class="card mb-0">
+                                    <div class="card-header collapsed" data-toggle="collapse" href="#collapseTwo">
+                                        <a class="card-title">
+                                            Can I track customer information and purchases with Shopkit POS?
+                                        </a>
+                                    </div>
+                                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
+                                         data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>Yes, Shopkit POS includes a customer management system that allows
+                                                you to store customer information, track customer purchases, and
+                                                create marketing campaigns based on customer data.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 custompadding">
-                            <div class="card mb-0">
-                                <div class="card-header collapsed" data-toggle="collapse" href="#collapseThree">
-                                    <a class="card-title">Can I process different types of payments with Shopkit
-                                        POS?</a>
-                                </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                     data-parent="#accordion">
-                                    <div class="card-body">
-                                        <p>
-                                            Yes, Shopkit POS includes support for credit cards, debit cards, and
-                                            mobile payments, making it easy for your customers to pay for their
-                                            purchases and for you to track payments and reconcile your sales.
-                                        </p>
+                            <div class="col-md-6 custompadding">
+                                <div class="card mb-0">
+                                    <div class="card-header collapsed" data-toggle="collapse" href="#collapseThree">
+                                        <a class="card-title">Can I process different types of payments with Shopkit
+                                            POS?</a>
+                                    </div>
+                                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                                         data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>
+                                                Yes, Shopkit POS includes support for credit cards, debit cards, and
+                                                mobile payments, making it easy for your customers to pay for their
+                                                purchases and for you to track payments and reconcile your sales.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-6 custompadding">
-                            <div class="card mb-0">
-                                <div class="card-header collapsed" data-toggle="collapse" href="#collapseFour">
-                                    <a class="card-title">Is Shopkit POS compatible with other applications?</a>
-                                </div>
-                                <div id="collapseFour" class="collapse" aria-labelledby="headingThree"
-                                     data-parent="#accordion">
-                                    <div class="card-body">
-                                        <p>
-                                            Yes, Shopkit POS includes API's for 3D Mart applications, enabling
-                                            businesses to integrate their systems with other applications, such
-                                            as inventory management apps, accounting apps, and others. This
-                                            allows businesses to expand their capabilities and increase their
-                                            efficiency.
-                                        </p>
+                            <div class="col-md-6 custompadding">
+                                <div class="card mb-0">
+                                    <div class="card-header collapsed" data-toggle="collapse" href="#collapseFour">
+                                        <a class="card-title">Is Shopkit POS compatible with other applications?</a>
+                                    </div>
+                                    <div id="collapseFour" class="collapse" aria-labelledby="headingThree"
+                                         data-parent="#accordion">
+                                        <div class="card-body">
+                                            <p>
+                                                Yes, Shopkit POS includes API's for 3D Mart applications, enabling
+                                                businesses to integrate their systems with other applications, such
+                                                as inventory management apps, accounting apps, and others. This
+                                                allows businesses to expand their capabilities and increase their
+                                                efficiency.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -502,43 +503,44 @@
             </div>
         </div>
     </div>
-</div>
 
-{# CONTACT #}
-<div id="cta" class="yd_cta_box">
-    <div class="container">
-        <div class="cta_box">
-            <div class="cta_box_inner">
-                <div class="col-sm-12 col-md-12">
-                    <h4>Start with Us</h4>
-                    <h2>Connect with us for more updates.</h2>
-                    <div class="form">
-                        <form id="chimp-form" class="subscribe-form"
-                              action="#" method="post"
-                              accept-charset="UTF-8" enctype="application/x-www-form-urlencoded"
-                              autocomplete="off" novalidate>
-                            <input class="mail" id="chimp-email" type="email" name="email"
-                                   placeholder="Enter email address" autocomplete="off"><input
-                                class="submit-button" type="submit" value="Count me In">
-                        </form>
-                        <div id="response"></div>
+    {# CONTACT #}
+    <div id="cta" class="yd_cta_box">
+        <div class="container">
+            <div class="cta_box">
+                <div class="cta_box_inner">
+                    <div class="col-sm-12 col-md-12">
+                        <h4>Start with Us</h4>
+                        <h2>Connect with us for more updates.</h2>
+                        <div class="form">
+                            <form id="chimp-form" class="subscribe-form"
+                                  action="#" method="post"
+                                  accept-charset="UTF-8" enctype="application/x-www-form-urlencoded"
+                                  autocomplete="off" novalidate>
+                                <input class="mail" id="chimp-email" type="email" name="email"
+                                       placeholder="Enter email address" autocomplete="off"><input
+                                    class="submit-button" type="submit" value="Count me In">
+                            </form>
+                            <div id="response"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
-{# VIDEO #}
-<div class="yd-cat" id="tutorial">
-    <div class="container text-center">
-        <video width="100%" height="auto" controls>
-            <source src="{% static 'website/video/tutorials.mp4' %}" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
-</div>
+    {# VIDEO #}
+    {% if video %}
+        <div class="yd-cat" id="tutorial">
+            <div class="container text-center">
+                <video width="100%" height="auto" controls>
+                    <source src="{{ video.video_file.url }}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    {% endif %}
 
 
 {% endblock context %}
