@@ -42,7 +42,7 @@ class PrivacyPolicyView(TemplateView):
 
 
 class TermsAndConditionsView(TemplateView):
-    template_name = 'website/privacy-policy.html'
+    template_name = 'website/terms-and-conditions.html'
 
 
 def download_software(request):

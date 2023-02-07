@@ -17,14 +17,8 @@
             <div class="col-lg-4 col-md-3 col-sm-12">
                 <div class="footer-links">
                     <ul>
-                        <li><a href="#main"> <img class="img-fluid" src="{% static 'website/icons/i1.png' %}"
-                                                  alt="Icon"> </a></li>
-                        <li><a href="#main"> <img class="img-fluid" src="{% static 'website/icons/i2.png' %}"
-                                                  alt="Icon"> </a></li>
-                        <li><a href="#main"> <img class="img-fluid" src="{% static 'website/icons/i3.png' %}"
-                                                  alt="Icon"> </a></li>
-                        <li><a href="#main"> <img class="img-fluid" src="{% static 'website/icons/i4.png' %}"
-                                                  alt="Icon"> </a></li>
+                        <li><a href="{% url 'website:terms-and-conditions' %}">Terms</a></li>
+                        <li><a href="{% url 'website:privacy-policy' %}">Privacy</a></li>
                     </ul>
                 </div>
             </div>
