@@ -4,65 +4,136 @@
 
 {% block context %}
 
-{# HERO SECTION #}
-<div class="home">
-    <div class="container">
-        <div class="hero-content wow fadeIn">
-            <div class="row">
-                <div class="container text-center">
-                    <div class="f-text">
-                        <div class="left-content">
-                            <div class="cat2 text-center">
-                                <h4>For Global</h4>
-                                <h2>Embeddable Jar</h2>
-                                <p>Make sure to download and install <a href="#">java 8</a> first, before installing
-                                    shopkit</p>
+    {# GLOLBAL #}
+    <div class="home">
+        <div class="container">
+            <div class="hero-content wow fadeIn">
+                <div class="row">
+                    <div class="container text-center">
+                        <div class="f-text">
+                            <div class="left-content">
+                                <div class="cat2 text-center">
+                                    <h4>For Global</h4>
+                                    <h2>Embeddable Jar</h2>
+                                    <p>Make sure to download and install <a href="#">java 8</a> first, before installing
+                                        shopkit</p>
+                                </div>
+                                {% if global_app_free %}
+                                    <a class="btn-action btn-outline nav-link js-scroll-trigger"
+                                       href="{% url 'website:download_software' %}?version=free&category=global">
+                                        Free Version
+                                    </a>
+                                {% else %}
+                                    <a class="btn-action btn-outline nav-link js-scroll-trigger" href="#">
+                                        Upcoming
+                                    </a>
+                                {% endif %}
+                                {% if global_app_free %}
+                                    <a class="btn-action"
+                                       href="{% url 'website:download_software' %}?version=premium&category=global">
+                                        Premium Version
+                                    </a>
+                                {% else %}
+                                    <a class="btn-action" href="#">Upcoming</a>
+                                {% endif %}
                             </div>
-                            <a class="btn-action btn-outline nav-link js-scroll-trigger"
-                               href="{% url 'website:download_software' %}">
-                                Free Version
-                            </a>
-                            <a class="btn-action" href="#">Upcoming ..</a>
+                            <p class="condition_txt">
+                                Download the zip file unzip it and use Shopkit, no need of installations
+                            </p>
                         </div>
-                        <p class="condition_txt">
-                            Download the zip file unzip it and use Shopkit, no need of installations
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="yd-cat">
-    <div class="container">
-        <div class="hero-content wow fadeIn">
-            <div class="row">
-                <div class="container text-center">
-                    <div class="f-text">
-                        <div class="left-content">
-                            <div class="cat2 text-center">
-                                <h4>For Windows</h4>
-                                <h2>Executable Installers</h2>
-                                <p>Make sure to download and install <a href="#">java 8</a> first, before installing
-                                    shopkit
-                                </p>
+    {# WINDOWS #}
+    <div class="yd-cat">
+        <div class="container">
+            <div class="hero-content wow fadeIn">
+                <div class="row">
+                    <div class="container text-center">
+                        <div class="f-text">
+                            <div class="left-content">
+                                <div class="cat2 text-center">
+                                    <h4>For Windows</h4>
+                                    <h2>Executable Installers</h2>
+                                    <p>Make sure to download and install <a href="#">java 8</a> first, before installing
+                                        shopkit
+                                    </p>
+                                </div>
+                                {% if windows_app_free %}
+                                    <a class="btn-action btn-outline nav-link js-scroll-trigger"
+                                       href="{% url 'website:download_software' %}?version=free&category=windows">
+                                        Free Version
+                                    </a>
+                                {% else %}
+                                    <a class="btn-action btn-outline nav-link js-scroll-trigger" href="#">
+                                        Upcoming
+                                    </a>
+                                {% endif %}
+                                {% if windows_app_premium %}
+                                    <a class="btn-action"
+                                       href="{% url 'website:download_software' %}?version=premium&category=windows">
+                                        Premium Version
+                                    </a>
+                                {% else %}
+                                    <a class="btn-action" href="#">Upcoming</a>
+                                {% endif %}
                             </div>
-                            <a class="btn-action btn-outline nav-link js-scroll-trigger" href="#features">
-                                Free Version
-                            </a>
-                            <a class="btn-action" href="#">Upcoming ..</a>
+                            <p class="condition_txt">
+                                Download the app and install it, version is supported for all versions of
+                                windows 7, 8, 10 and 11
+                            </p>
                         </div>
-                        <p class="condition_txt">
-                            Mac and Linux versions are not supported yet<br>
-                            Will be available with next version but you can use global version on Linux and Mac
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
+    {# LINUX #}
+    <div class="yd-cat border-top">
+        <div class="container">
+            <div class="hero-content wow fadeIn">
+                <div class="row">
+                    <div class="container text-center">
+                        <div class="f-text">
+                            <div class="left-content">
+                                <div class="cat2 text-center">
+                                    <h4>For LINUX</h4>
+                                    <h2>Not available</h2>
+                                    <p>Linux support is not added yet, but you can download the <b>global version</b>
+                                        and use it as embeddable jar file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {# MAC #}
+    <div class="yd-cat border-top">
+        <div class="container">
+            <div class="hero-content wow fadeIn">
+                <div class="row">
+                    <div class="container text-center">
+                        <div class="f-text">
+                            <div class="left-content">
+                                <div class="cat2 text-center">
+                                    <h4>For MAC</h4>
+                                    <h2>Not available</h2>
+                                    <p>Linux support is not added yet, but you can download the <b>global version</b>
+                                        and use it as embeddable jar file</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 {% endblock context %}

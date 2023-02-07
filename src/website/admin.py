@@ -8,3 +8,7 @@ class ApplicationAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Application, ApplicationAdmin)
+
+admin.site.site_header = 'ROOT ADMINISTRATION'
+admin.site.index_title = 'SHOP KIT'
+admin.site.site_title = 'root administration'
