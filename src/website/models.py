@@ -31,3 +31,24 @@ class Application(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class TutorialVideo(models.Model):
+    TYPE_CHOICE = (
+        ('i', 'Introduction'),
+        ('t', 'Tutorial'),
+        ('m', 'Marketing'),
+    )
+
+    video_file = models.FileField(upload_to='videos/')
+    video_type = models.CharField(max_length=1, choices=TYPE_CHOICE)
+
+    is_active = models.BooleanField(default=False)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['-created_on']
+        verbose_name_plural = "Tutorial Videos"
+
+    def __str__(self):
+        return f"Video {str(self.pk)} of type {self.get_video_type_display()}"

@@ -1,11 +1,17 @@
 from django.http import Http404, FileResponse
 from django.views.generic import TemplateView
 
-from src.website.models import Application
+from src.website.models import Application, TutorialVideo
 
 
 class HomeView(TemplateView):
     template_name = 'website/index.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(HomeView, self).get_context_data(**kwargs)
+        videos = TutorialVideo.objects.filter(video_type='i')
+        context['video'] = videos.first() if videos else None
+        return context
 
 
 class DownloadView(TemplateView):
