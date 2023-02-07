@@ -18,6 +18,7 @@ class Application(models.Model):
     description = models.TextField(null=True, blank=True, help_text="Detailed down description")
     category = models.CharField(max_length=1, choices=CATEGORY_CHOICE)
     operating_system = models.CharField(max_length=1, choices=OPERATING_SYSTEM_CHOICE)
+    app_file = models.FileField(upload_to='applications/', help_text="Please user a installers or zip files here")
 
     is_active = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
