@@ -11,7 +11,7 @@ env = environ.Env(
 )
 environ.Env.read_env(BASE_DIR / '.env')
 
-DEBUG = True
+DEBUG = env('DEBUG')
 ROOT_URLCONF = 'core.urls'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -139,10 +139,10 @@ DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
 
 
 """ DEBUGGING TOOLS -----------------------------------------------------------------------------"""
-if ENVIRONMENT != 'server':
-    INSTALLED_APPS += [
-        'django_browser_reload'
-    ]
-    MIDDLEWARE += [
-        'django_browser_reload.middleware.BrowserReloadMiddleware'
-    ]
+# if ENVIRONMENT != 'server':
+#     INSTALLED_APPS += [
+#         'django_browser_reload'
+#     ]
+#     MIDDLEWARE += [
+#         'django_browser_reload.middleware.BrowserReloadMiddleware'
+#     ]
