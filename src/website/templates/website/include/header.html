@@ -1,0 +1,20 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top wt-border">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'website:home' %}">S H O P K I T .</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto navbar-right">
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'website:home' %}#features">Features</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'website:home' %}#reviews">Reviews</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'website:home' %}#pricing">Pricing</a></li>
+                <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'website:home' %}#tutorial">How To Use</a></li>
+                <li><a class="btn-nav js-scroll-trigger" href="{% url 'website:download' %}">Download</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
