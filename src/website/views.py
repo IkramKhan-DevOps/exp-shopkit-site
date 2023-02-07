@@ -1,10 +1,6 @@
-import os
-
-from django.http import HttpResponse, Http404, FileResponse
-from django.shortcuts import render
+from django.http import Http404, FileResponse
 from django.views.generic import TemplateView
 
-from core import settings
 from src.website.models import Application
 
 
@@ -41,8 +37,37 @@ class DownloadView(TemplateView):
         return context
 
 
+class PrivacyPolicyView(TemplateView):
+    template_name = 'website/privacy-policy.html'
+
+
+class TermsAndConditionsView(TemplateView):
+    template_name = 'website/privacy-policy.html'
+
+
 def download_software(request):
-    file = open('media/PodTalk-1.0.0.zip', 'rb')
-    response = FileResponse(file)
-    response['Content-Disposition'] = 'attachment; filename="software.exe"'
-    return response
+
+    operation_system = request.GET.get('os')
+    category = request.GET.get('category')
+
+    # IF category and os available and if parameters are correct.
+    if operation_system and category and category in ['p', 'f'] and operation_system in ['w', 'g', 'm', 'l']:
+
+        # CHECK: if requested version is available or not
+        app = Application.objects.filter(category=category, operating_system=operation_system).order_by('-version')
+        if app:
+
+            # STATISTICS: update statistics
+            app = app[0]
+            app.total_downloads += 1
+            app.save()
+
+            # SAVE: download settings
+            file = app.app_file
+            file_extension = str(file).split('.')[1]
+            file_name = f"{app.name}-{app.get_category_display()} v{app.version} for {app.get_operating_system_display()}.{file_extension}"
+            response = FileResponse(file)
+            response['Content-Disposition'] = f'attachment; filename="{file_name}"'
+            return response
+
+    raise Http404

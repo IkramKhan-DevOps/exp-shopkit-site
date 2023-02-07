@@ -20,6 +20,8 @@ class Application(models.Model):
     operating_system = models.CharField(max_length=1, choices=OPERATING_SYSTEM_CHOICE)
     app_file = models.FileField(upload_to='applications/', help_text="Please user a installers or zip files here")
 
+    total_downloads = models.PositiveIntegerField(default=0)
+
     is_active = models.BooleanField(default=False)
     created_on = models.DateTimeField(auto_now_add=True)
     updated_on = models.DateTimeField(auto_now=True)

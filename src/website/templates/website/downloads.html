@@ -20,7 +20,7 @@
                                 </div>
                                 {% if global_app_free %}
                                     <a class="btn-action btn-outline nav-link js-scroll-trigger"
-                                       href="{% url 'website:download_software' %}?version=free&category=global">
+                                       href="{% url 'website:download_software' %}?os=g&category=f">
                                         Free Version
                                     </a>
                                 {% else %}
@@ -28,9 +28,9 @@
                                         Upcoming
                                     </a>
                                 {% endif %}
-                                {% if global_app_free %}
+                                {% if global_app_premium %}
                                     <a class="btn-action"
-                                       href="{% url 'website:download_software' %}?version=premium&category=global">
+                                       href="{% url 'website:download_software' %}?os=g&category=p">
                                         Premium Version
                                     </a>
                                 {% else %}
@@ -67,7 +67,7 @@
                                 </div>
                                 {% if windows_app_free %}
                                     <a class="btn-action btn-outline nav-link js-scroll-trigger"
-                                       href="{% url 'website:download_software' %}?version=free&category=windows">
+                                       href="{% url 'website:download_software' %}?os=w&category=f">
                                         Free Version
                                     </a>
                                 {% else %}
@@ -77,7 +77,7 @@
                                 {% endif %}
                                 {% if windows_app_premium %}
                                     <a class="btn-action"
-                                       href="{% url 'website:download_software' %}?version=premium&category=windows">
+                                       href="{% url 'website:download_software' %}?os=w&category=p">
                                         Premium Version
                                     </a>
                                 {% else %}
