@@ -1,4 +1,3 @@
-
 import datetime
 from pathlib import Path
 import environ
@@ -32,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     # YOUR APPS
+    'src.accounts.apps.AccountsConfig',
     'src.website.apps.WebsiteConfig',
 ]
 
@@ -136,7 +136,6 @@ DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {
     'GIF': ".gif"
 }
 DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
-
 
 """ DEBUGGING TOOLS -----------------------------------------------------------------------------"""
 # if ENVIRONMENT != 'server':
