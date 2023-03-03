@@ -13,7 +13,7 @@ environ.Env.read_env(BASE_DIR / '.env')
 DEBUG = env('DEBUG')
 ROOT_URLCONF = 'core.urls'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+AUTH_USER_MODEL = 'accounts.User'
 SECRET_KEY = env('SECRET_KEY')
 ENVIRONMENT = env('ENVIRONMENT')
 ALLOWED_HOSTS = ["127.0.0.1", "shopkit.exarth.com"]
