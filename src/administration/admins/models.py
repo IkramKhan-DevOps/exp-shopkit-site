@@ -29,7 +29,7 @@ class Application(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_name_plural = "Applications and Versions"
+        verbose_name_plural = "Applications"
 
     def __str__(self):
         return self.name
@@ -49,7 +49,7 @@ class ApplicationRegistration(models.Model):
     updated_on = models.DateTimeField(auto_now=True)
 
     class Meta:
-        verbose_name_plural = "Applications Registrations"
+        verbose_name_plural = "Registrations"
 
     def __str__(self):
         return f'{self.user.username} registered {self.application.name} v{self.application.version} on {self.created_on}'
@@ -75,7 +75,7 @@ class DemoRequest(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
-        verbose_name_plural = "Demo Request Calls"
+        verbose_name_plural = "Demo Requests"
 
     def __str__(self):
         return f'{self.name}'

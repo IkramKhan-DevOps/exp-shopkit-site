@@ -6,18 +6,24 @@ from .models import (
 
 
 class ApplicationAdmin(admin.ModelAdmin):
-    list_display = ['name', 'version', 'category', 'operating_system', 'total_downloads', 'created_on', 'is_active']
+    list_display = [
+        'name', 'version', 'category', 'operating_system', 'total_downloads',
+        'created_on', 'is_active'
+    ]
     list_filter = ['category', 'operating_system']
+    search_fields = ['name', 'version']
 
 
 class DemoRequestAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'email', 'phone', 'time_slot', 'status', 'created_on', 'is_active']
     list_filter = ['status', 'is_active']
+    search_fields = ['id', 'name', 'email', 'phone']
 
 
 class ComplainRequestAdmin(admin.ModelAdmin):
     list_display = ['id', 'user', 'heading', 'status', 'created_on', 'is_active']
     list_filter = ['status', 'is_active']
+    search_fields = ['id', 'user', 'heading']
 
 
 class ApplicationRegistrationAdmin(admin.ModelAdmin):
@@ -25,6 +31,7 @@ class ApplicationRegistrationAdmin(admin.ModelAdmin):
         'id', 'user', 'application', 'software_id', 'is_active', 'created_on'
     ]
     list_filter = ['is_active']
+    search_fields = ['software_id', 'application', 'user']
 
 
 admin.site.register(Application, ApplicationAdmin)
