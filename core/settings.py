@@ -1,4 +1,3 @@
-
 import datetime
 from pathlib import Path
 import environ
@@ -14,7 +13,7 @@ environ.Env.read_env(BASE_DIR / '.env')
 DEBUG = env('DEBUG')
 ROOT_URLCONF = 'core.urls'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
+AUTH_USER_MODEL = 'accounts.User'
 SECRET_KEY = env('SECRET_KEY')
 ENVIRONMENT = env('ENVIRONMENT')
 ALLOWED_HOSTS = ["127.0.0.1", "shopkit.exarth.com"]
@@ -32,11 +31,12 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
 
     # YOUR APPS
+    'src.accounts.apps.AccountsConfig',
     'src.website.apps.WebsiteConfig',
+    'src.administration.admins.apps.AdminsConfig',
 ]
 
 MIDDLEWARE = [
-    # DJANGO MIDDLEWARES
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -47,7 +47,6 @@ MIDDLEWARE = [
 ]
 
 AUTHENTICATION_BACKENDS = [
-    # DJANGO BACKENDS
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 ]
@@ -136,7 +135,6 @@ DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {
     'GIF': ".gif"
 }
 DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
-
 
 """ DEBUGGING TOOLS -----------------------------------------------------------------------------"""
 # if ENVIRONMENT != 'server':
