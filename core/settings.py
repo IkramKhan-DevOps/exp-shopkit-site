@@ -33,10 +33,10 @@ INSTALLED_APPS = [
     # YOUR APPS
     'src.accounts.apps.AccountsConfig',
     'src.website.apps.WebsiteConfig',
+    'src.administration.admins.apps.AdminsConfig',
 ]
 
 MIDDLEWARE = [
-    # DJANGO MIDDLEWARES
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -47,7 +47,6 @@ MIDDLEWARE = [
 ]
 
 AUTHENTICATION_BACKENDS = [
-    # DJANGO BACKENDS
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',
 ]

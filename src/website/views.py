@@ -1,7 +1,7 @@
 from django.http import Http404, FileResponse
 from django.views.generic import TemplateView
 
-from src.website.models import Application, TutorialVideo
+from src.administration.admins.models import Application
 
 
 class HomeView(TemplateView):
@@ -9,8 +9,6 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(HomeView, self).get_context_data(**kwargs)
-        videos = TutorialVideo.objects.filter(video_type='i')
-        context['video'] = videos.first() if videos else None
         return context
 
 
