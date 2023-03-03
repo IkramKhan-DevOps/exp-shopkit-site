@@ -39,7 +39,10 @@ class ApplicationRegistration(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     application = models.ForeignKey(Application, on_delete=models.CASCADE)
     note = models.TextField(null=True, blank=True)
-    software_id = models.CharField(unique=True, max_length=1000, help_text="Application ID/Client ID assigned by application activator.")
+    software_id = models.CharField(
+        unique=True, max_length=1000,
+        help_text="Application ID/Client ID assigned by application activator."
+    )
 
     is_active = models.BooleanField(default=True)
     created_on = models.DateTimeField(auto_now_add=True)

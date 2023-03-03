@@ -6,6 +6,7 @@ class User(AbstractUser):
     """
     PRE: need to migrate accounts application at the start
     """
+    phone_number = models.CharField(max_length=15, null=True, blank=True)
     is_client = models.BooleanField(default=False)
 
     class Meta:
