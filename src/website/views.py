@@ -1,4 +1,5 @@
 from django.http import Http404, FileResponse
+from django.urls import reverse_lazy
 from django.views.generic import TemplateView, CreateView
 
 from src.administration.admins.models import Application, DemoRequest
@@ -80,5 +81,6 @@ def download_software(request):
 class BookADemoView(CreateView):
     template_name = 'website/book.html'
     model = DemoRequest
-    fields = ['name', 'email', 'phone', 'time_slot', 'is_active']
+    fields = ['name', 'email', 'phone', 'time_slot']
+    success_url = reverse_lazy('website:book-a-demo')
 

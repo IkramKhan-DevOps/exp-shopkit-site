@@ -18,6 +18,7 @@ SECRET_KEY = env('SECRET_KEY')
 ENVIRONMENT = env('ENVIRONMENT')
 ALLOWED_HOSTS = ["127.0.0.1", "shopkit.exarth.com"]
 SITE_ID = 1
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 INSTALLED_APPS = [
     # DJANGO APPS
@@ -29,6 +30,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+
+    # EXTERNAL APPS
+    'crispy_forms',
 
     # YOUR APPS
     'src.accounts.apps.AccountsConfig',
