@@ -1,0 +1,57 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block subtitle %}
+    Downloads
+{% endblock %}
+
+{% block context %}
+
+    {# GLOLBAL #}
+    <div class="home">
+        <div class="container">
+            <div class="hero-content wow fadeIn">
+                <div class="row">
+                    <div class="container text-center">
+                        <div class="f-text">
+                            <div class="left-content">
+                                <div class="cat2 text-center">
+                                    <h4>Lets connect!</h4>
+                                    <h2>Book a Demo</h2>
+                                    <p>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {# DIV #}
+    <div class="yd-cat border-top">
+        <div class="container">
+            <div class="hero-content wow fadeIn">
+                <div class="row">
+                    <div class="container text-center">
+                        <div class="f-text">
+                            <div class="left-content">
+                                <div class="cat2 text-center">
+                                    <p>
+                                        {{ form }}
+                                        <button class="btn-action btn-outline nav-link js-scroll-trigger" type="submit">
+                                            Submit
+                                        </button>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock context %}

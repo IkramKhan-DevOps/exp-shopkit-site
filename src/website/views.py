@@ -1,7 +1,7 @@
 from django.http import Http404, FileResponse
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, CreateView
 
-from src.administration.admins.models import Application
+from src.administration.admins.models import Application, DemoRequest
 
 
 class HomeView(TemplateView):
@@ -75,3 +75,10 @@ def download_software(request):
             return response
 
     raise Http404
+
+
+class BookADemoView(CreateView):
+    template_name = 'website/book.html'
+    model = DemoRequest
+    fields = ['name', 'email', 'phone', 'time_slot', 'is_active']
+

@@ -137,10 +137,10 @@ DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {
 DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
 
 """ DEBUGGING TOOLS -----------------------------------------------------------------------------"""
-# if ENVIRONMENT != 'server':
-#     INSTALLED_APPS += [
-#         'django_browser_reload'
-#     ]
-#     MIDDLEWARE += [
-#         'django_browser_reload.middleware.BrowserReloadMiddleware'
-#     ]
+if ENVIRONMENT != 'server':
+    INSTALLED_APPS += [
+        'django_browser_reload'
+    ]
+    MIDDLEWARE += [
+        'django_browser_reload.middleware.BrowserReloadMiddleware'
+    ]
