@@ -44,6 +44,9 @@
                         <div class="f-text">
                             <div class="left-content">
                                 <div class="cat2">
+
+                                    {% include 'website/include/messages.html' %}
+
                                     <form method="post">
                                         {% csrf_token %}
                                         {{ form|crispy }}
@@ -65,8 +68,8 @@
 
 {% block js_out %}
     <script>
-    $(document).ready(function () {
-        $('#id_time_slot').attr('type', 'datetime-local');
-    })
+        $(document).ready(function () {
+            $('#id_time_slot').attr('type', 'datetime-local');
+        })
     </script>
 {% endblock %}
