@@ -21,7 +21,7 @@ class DemoRequestAdmin(admin.ModelAdmin):
 
 
 class ComplainRequestAdmin(admin.ModelAdmin):
-    list_display = ['id', 'user', 'heading', 'status', 'created_on', 'is_active']
+    list_display = ['id', 'name', 'heading', 'status', 'created_on', 'is_active']
     list_filter = ['status', 'is_active']
     search_fields = ['id', 'user', 'heading']
 

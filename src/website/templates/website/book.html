@@ -36,30 +36,26 @@
 
 
     {# DIV #}
-    <div class="yd-cat border-top">
-        <div class="container">
-            <div class="hero-content wow fadeIn">
-                <div class="row">
-                    <div class="container text-center col-sm-6">
-                        <div class="f-text">
-                            <div class="left-content">
-                                <div class="cat2">
+    <div class="my-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-6">
 
-                                    {% include 'website/include/messages.html' %}
+                <div class="card">
+                    <div class="card-body">
 
-                                    <form method="post">
-                                        {% csrf_token %}
-                                        {{ form|crispy }}
-                                        <button class="btn-action btn-outline nav-link js-scroll-trigger" type="submit">
-                                            Submit
-                                        </button>
+                        {% include 'website/include/messages.html' %}
 
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+                        <form method="post">
+                            {% csrf_token %}
+                            {{ form|crispy }}
+                            <button class="btn-action btn-outline nav-link js-scroll-trigger" type="submit">
+                                Submit
+                            </button>
+
+                        </form>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -70,6 +66,7 @@
     <script>
         $(document).ready(function () {
             $('#id_time_slot').attr('type', 'datetime-local');
+            $('input').addClass('mt-1');
         })
     </script>
 {% endblock %}

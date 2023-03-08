@@ -83,7 +83,10 @@ class BookADemoView(CreateView):
     template_name = 'website/book.html'
     model = DemoRequest
     fields = ['name', 'email', 'phone', 'time_slot']
-    success_url = reverse_lazy('website:book-a-demo')
+
+    def get_success_url(self):
+        messages.success(self.request, "You have booked a demo successfully")
+        return reverse_lazy('website:book-a-demo')
 
 
 
