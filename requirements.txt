@@ -5,3 +5,5 @@ django-environ
 django-resized
 python-decouple
 django-browser-reload
+django-crispy-forms
+

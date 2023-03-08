@@ -18,6 +18,7 @@ SECRET_KEY = env('SECRET_KEY')
 ENVIRONMENT = env('ENVIRONMENT')
 ALLOWED_HOSTS = ["127.0.0.1", "shopkit.exarth.com"]
 SITE_ID = 1
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 INSTALLED_APPS = [
     # DJANGO APPS
@@ -29,6 +30,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
+
+    # EXTERNAL APPS
+    'crispy_forms',
+    'phonenumber_field',
 
     # YOUR APPS
     'src.accounts.apps.AccountsConfig',
@@ -137,10 +142,10 @@ DJANGORESIZED_DEFAULT_FORMAT_EXTENSIONS = {
 DJANGORESIZED_DEFAULT_NORMALIZE_ROTATION = True
 
 """ DEBUGGING TOOLS -----------------------------------------------------------------------------"""
-# if ENVIRONMENT != 'server':
-#     INSTALLED_APPS += [
-#         'django_browser_reload'
-#     ]
-#     MIDDLEWARE += [
-#         'django_browser_reload.middleware.BrowserReloadMiddleware'
-#     ]
+if ENVIRONMENT != 'server':
+    INSTALLED_APPS += [
+        'django_browser_reload'
+    ]
+    MIDDLEWARE += [
+        'django_browser_reload.middleware.BrowserReloadMiddleware'
+    ]

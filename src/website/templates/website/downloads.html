@@ -18,8 +18,12 @@
                                 <div class="cat2 text-center">
                                     <h4>For Global</h4>
                                     <h2>Embeddable Jar</h2>
-                                    <p>Make sure to download and install <a target="_blank" href="https://www.java.com/download/ie_manual.jsp">java 8</a> first, before installing
-                                        shopkit</p>
+                                    <p>Make sure to download and install
+                                        <a target="_blank" href="https://www.java.com/download/ie_manual.jsp">
+                                            java 8
+                                        </a>
+                                        first, before installing Swipe X
+                                    </p>
                                 </div>
                                 {% if global_app_free %}
                                     <a class="btn-action btn-outline nav-link js-scroll-trigger"
@@ -31,20 +35,12 @@
                                         Upcoming
                                     </a>
                                 {% endif %}
-                                {% if global_app_premium %}
-                                    <a class="btn-action"
-                                       href="{% url 'website:download_software' %}?os=g&category=p">
-                                        Premium Version
-                                    </a>
-                                {% else %}
-                                    <a class="btn-action" href="#">Upcoming</a>
-                                {% endif %}
+                                <a class="btn-action" href="{% url 'website:book-a-demo' %}">Book a Demo</a>
                             </div>
                             <p class="condition_txt">
                                 <br>
-                                Download the zip file unzip it and use Shopkit, no need of installations<br>
-                                Fully working on windows linux and mac<br>
-                                make sure to install java 8 first
+                                Only free version is available to download, download the zip file unzip it and use swipe x<br>
+                                Book a demo with our team to access premium features and see the product in action
                             </p>
                         </div>
                     </div>
@@ -64,7 +60,9 @@
                                 <div class="cat2 text-center">
                                     <h4>For Windows</h4>
                                     <h2>Executable Installers</h2>
-                                    <p>Make sure to download and install <a target="_blank" href="https://www.java.com/download/ie_manual.jsp">java 8</a> first, before installing
+                                    <p>Make sure to download and install <a target="_blank"
+                                                                            href="https://www.java.com/download/ie_manual.jsp">java
+                                        8</a> first, before installing
                                         shopkit
                                     </p>
                                 </div>
@@ -78,18 +76,12 @@
                                         Upcoming
                                     </a>
                                 {% endif %}
-                                {% if windows_app_premium %}
-                                    <a class="btn-action"
-                                       href="{% url 'website:download_software' %}?os=w&category=p">
-                                        Premium Version
-                                    </a>
-                                {% else %}
-                                    <a class="btn-action" href="#">Upcoming</a>
-                                {% endif %}
+                                <a class="btn-action" href="{% url 'website:book-a-demo' %}">Book a Demo</a>
                             </div>
                             <p class="condition_txt">
-                                <br>Download the app and install it, version is supported for all versions of
-                                windows 7, 8, 10 and 11
+                                <br>
+                                Only free version is available to download, download the zip file unzip it and use swipe x<br>
+                                Book a demo with our team to access premium features and see the product in action
                             </p>
                         </div>
                     </div>

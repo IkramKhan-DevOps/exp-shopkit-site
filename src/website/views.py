@@ -1,7 +1,9 @@
+from django.contrib import messages
 from django.http import Http404, FileResponse
-from django.views.generic import TemplateView
+from django.urls import reverse_lazy
+from django.views.generic import TemplateView, CreateView
 
-from src.administration.admins.models import Application
+from src.administration.admins.models import Application, DemoRequest, ComplainRequest
 
 
 class HomeView(TemplateView):
@@ -75,3 +77,26 @@ def download_software(request):
             return response
 
     raise Http404
+
+
+class DemoRequestCreateView(CreateView):
+    template_name = 'website/book.html'
+    model = DemoRequest
+    fields = ['name', 'email', 'phone', 'time_slot']
+
+    def get_success_url(self):
+        messages.success(self.request, "You have booked a demo successfully")
+        return reverse_lazy('website:book-a-demo')
+
+
+class ComplainRequestCreateView(CreateView):
+    template_name = 'website/complain.html'
+    model = ComplainRequest
+    fields = ['name', 'email', 'phone', 'heading', 'description']
+
+    def get_success_url(self):
+        messages.success(self.request, "You request has been sent to support team.")
+        return reverse_lazy('website:report')
+
+
+

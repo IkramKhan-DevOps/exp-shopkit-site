@@ -1,4 +1,5 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 from src.accounts.models import User
 
@@ -75,6 +76,7 @@ class DemoRequest(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
+        ordering = ['-created_on']
         verbose_name_plural = "Demo Requests"
 
     def __str__(self):
@@ -90,16 +92,20 @@ class ComplainRequest(models.Model):
         ('unr', 'Un Resolved'),
     )
 
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    name = models.CharField(max_length=255)
+    email = models.CharField(max_length=255)
+    phone = PhoneNumberField(null=True, blank=False)
+
     heading = models.CharField(max_length=255)
-    description = models.TextField()
+    description = models.TextField(help_text="Explain issue/bug in detail")
 
     status = models.CharField(max_length=3, default='pe', choices=STATUS_CHOICE)
     is_active = models.BooleanField(default=True)
     created_on = models.DateTimeField(auto_now_add=True)
 
     class Meta:
+        ordering = ['-created_on']
         verbose_name_plural = "Complain Requests"
 
     def __str__(self):
-        return f'{self.heading} filed by {self.user.username}'
+        return f'{self.heading} filed by {self.name}'
