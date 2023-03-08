@@ -3,7 +3,7 @@
 {% load crispy_forms_tags %}
 
 {% block subtitle %}
-    Book a Demo
+    File a complain
 {% endblock %}
 
 {% block context %}
@@ -17,13 +17,10 @@
                         <div class="f-text">
                             <div class="left-content">
                                 <div class="cat2 text-center">
-                                    <h4>Book a Demo with Us Today!</h4>
-                                    <h2>See How Our Solutions Can Help Your Business</h2>
+                                    <h4>Need Help!</h4>
+                                    <h2>Lets report this issue to our team.</h2>
                                     <p>
-                                        Experience our product firsthand and see how it can help your business. Book a
-                                        demo with us today to get a personalized walkthrough of our features and
-                                        solutions. Our team of experts will guide you through the platform and answer
-                                        any questions you may have.
+                                        {% lorem 20 w %}
                                     </p>
                                 </div>
                             </div>
@@ -66,7 +63,8 @@
     <script>
         $(document).ready(function () {
             $('#id_time_slot').attr('type', 'datetime-local');
-            $('input').addClass('mt-1');
+            $('input').addClass('mt-2');
+            $('select').addClass('mt-2');
         })
     </script>
 {% endblock %}

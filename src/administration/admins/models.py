@@ -1,4 +1,5 @@
 from django.db import models
+from phonenumber_field.modelfields import PhoneNumberField
 
 from src.accounts.models import User
 
@@ -93,7 +94,7 @@ class ComplainRequest(models.Model):
 
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
-    phone = models.CharField(max_length=255)
+    phone = PhoneNumberField(null=True, blank=False)
 
     heading = models.CharField(max_length=255)
     description = models.TextField(help_text="Explain issue/bug in detail")

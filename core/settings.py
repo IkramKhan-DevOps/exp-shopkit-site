@@ -33,6 +33,7 @@ INSTALLED_APPS = [
 
     # EXTERNAL APPS
     'crispy_forms',
+    'phonenumber_field',
 
     # YOUR APPS
     'src.accounts.apps.AccountsConfig',
